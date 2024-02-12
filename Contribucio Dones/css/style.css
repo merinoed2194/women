@@ -90,10 +90,10 @@ article{
         justify-content: center;
         padding-bottom: 3rem;
         & figure{
-            width: 40%;
+            width: 100%;
             margin: auto;
             & img{
-                width: 100%;
+                width: 40%;
             }
         }
     }
@@ -111,7 +111,7 @@ article{
 @media only screen and (min-width: 768px){
     section{
         display: grid;
-        grid-template-columns: repeat(5, auto);
+        grid-template-columns: repeat(4, auto);
         grid-template-rows: repeat(3, auto);
         & h3{
             grid-column-start: 3;
@@ -121,6 +121,7 @@ article{
 
         }
         & figure{
+            border-right: 1px solid black;
             grid-column-start: 1;
             grid-column-end: 3;
             grid-row-start: 1;
