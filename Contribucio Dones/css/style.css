@@ -91,7 +91,7 @@ article{
         padding-bottom: 3rem;
         & figure{
             width: 100%;
-            margin: auto;
+            /* margin: auto; */
             & img{
                 width: 50%;
 
@@ -149,13 +149,11 @@ a:hover{
     cursor: pointer;
     transform: scale(1.2);
 }
+.modal-container footer div:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
 
-/* .modal-container header,
-.modal-container footer{
-    background-color: var(--bg-primary);
-    color: var(--text-color);
-    padding: 0.5rem;
-} */
 .modal-container :where(header, footer){
     color: var(--text-color);
     padding: 0.5rem;
@@ -165,10 +163,10 @@ a:hover{
     padding: 0.8rem 1rem;
     text-align: justify;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
     & figure{
-        width: 45%;
+        width: 50%;
         border-right: none;
         & img{
             width: 100%;
@@ -176,7 +174,7 @@ a:hover{
         }
     }
     & p{
-        width: 45%;
+        width: 100%;
     }
 }
 
@@ -186,9 +184,10 @@ a:hover{
     /* height: 90vh; */
     margin: auto;
     background-color: var(--bg-modal);
-    padding: 1rem;
-    animation: modal;
-    animation-duration: 1.5s;
+    padding: 0.5rem;
+    animation: modal 1s; 
+    /* forwards para mantener el estado de la animacion */
+    
 }
 
 .oculta-modal{
@@ -197,7 +196,7 @@ a:hover{
 
 @keyframes modal{
     from{
-        top: -500px;
+        top: 0;
         opacity: 0;
     }
     to{
@@ -305,6 +304,14 @@ a:hover{
     }
     .activa div[class='select']::before{
         content: '▲';
+    }
+    .modal-container main{
+        display: inline-block;
+        & figure{
+            float: left;
+            width: 15%;
+            margin: 0.5rem 0.5rem 0 0;
+        }
     }
 }
 
