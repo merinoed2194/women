@@ -79,10 +79,11 @@ article{
     gap: 0.5rem;
     text-align: center;
     & h3{
-        position: relative;
+        background-image: url(../material/4546129_3920.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         cursor: pointer;
         width: 100%;
-        background-color: var(--faq-dark);
         padding: 1rem;
         border-bottom: 1px solid var(--bg-color) ;
     }
