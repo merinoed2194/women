@@ -67,8 +67,8 @@ main{
     flex: 1 0 auto;
     flex-direction: column;
     align-items: center;
-    background-color: var(--bg-color);
-    
+    /* background-color: var(--bg-color); */
+    background-color: #f2f2f2;
 }
 
 /**ARTICLE*/
@@ -79,7 +79,8 @@ article{
     gap: 0.5rem;
     text-align: center;
     & h3{
-        background-image: url(../material/4546129_3920.jpg);
+        color: #fff;
+        background-image: url(../material/18954497_6020105.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         cursor: pointer;
@@ -135,10 +136,15 @@ a:hover{
     align-items: center;
     justify-content: center;
 }
+.contenido{
+    margin: auto;
+    width: 90%;
+}
 
 .modal-container header{
     display: flex;
     justify-content: space-between;
+    background-color: #f2A594;
 }
 
 .modal-container header i{
@@ -149,6 +155,9 @@ a:hover{
 .modal-container header i:hover{
     cursor: pointer;
     transform: scale(1.2);
+}
+.modal-container footer{
+    background-color: #B4C0D9;
 }
 .modal-container footer div:hover{
     cursor: pointer;
@@ -164,10 +173,11 @@ a:hover{
     padding: 0.8rem 1rem;
     text-align: justify;
     display: flex;
+    background-color: #f2f2f2;
     /* flex-direction: row; */
     justify-content: center;
     & figure{
-        width: 50%;
+        width: 65%;
         border-right: none;
         & img{
             width: 100%;
@@ -310,10 +320,12 @@ a:hover{
         display: inline-block;
         & figure{
             float: left;
-            width: 15%;
+            width: 30%;
             margin: 0.5rem 0.5rem 0 0;
+            border: none;
         }
     }
+    
 }
 
 @media only screen and (min-width: 1024px) {
@@ -328,6 +340,9 @@ a:hover{
             height: auto;
             transition: transform 1s ease;
         }
+    }
+    .modal-container{
+        width: 85%;
     }
 }
 
