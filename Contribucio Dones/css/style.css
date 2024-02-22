@@ -78,16 +78,6 @@ article{
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
-    & h3{
-        color: #fff;
-        background-image: url(../material/18954497_6020105.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        cursor: pointer;
-        width: 100%;
-        padding: 1rem;
-        border-bottom: 1px solid var(--bg-color) ;
-    }
     & section{
         justify-content: center;
         padding-bottom: 3rem;
@@ -99,25 +89,29 @@ article{
 
             }
         }
+        & h3{
+            color: #fff;
+            cursor: pointer;
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, red, blue, green, black);
+            background-size: 400% 400%;
+            animation: cambiar 10s ease infinite;
+        }
     }
 }
-#slider {
-    display: none;
+@keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 50% 0;}
 }
+
+
 
 
 /**modal*/
-/* a{
-    display: inline-block;
-    border: 2px solid var(--text-color);
-    border-radius: 5px;
-    text-decoration: none;
-    color: var(--text-color);
-    padding: 1rem;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    transition: background-color 0.8s ease;
-} */
+
 
 a:hover{
     background-color: var(--hover-color);
@@ -136,9 +130,13 @@ a:hover{
     align-items: center;
     justify-content: center;
 }
+.select{
+    font-weight: bold;
+}
 .contenido{
     margin: auto;
     width: 90%;
+    text-align: justify;
 }
 
 .modal-container header{
@@ -176,6 +174,7 @@ a:hover{
     background-color: #f2f2f2;
     /* flex-direction: row; */
     justify-content: center;
+    line-height: 2rem;
     & figure{
         width: 65%;
         border-right: none;
@@ -216,7 +215,9 @@ a:hover{
         
     }
 }
-
+#foto{
+    border: none;
+}
 
 
 /*    !MEDIAQUERIES             */
@@ -234,11 +235,12 @@ a:hover{
                 width: 100%;
                 height: max-content;
                 background-color: #448ef4;
-                margin: auto;
+                /* margin: auto; */
                 grid-column-start: 1;
                 grid-column-end: 3;
                 grid-row-start: 1;
                 grid-row-end: 2;
+                margin-bottom: 10px;
             }
             & figure{
                 height: 100%;
@@ -271,6 +273,7 @@ a:hover{
                 grid-column-end: 3;
                 grid-row-start: 1;
                 grid-row-end: 2;
+                margin-bottom: 10px;
             }
             & figure{
                 height: 100%;
