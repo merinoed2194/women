@@ -8,23 +8,7 @@ contenedores.forEach(contenedor => {
 });
 
 
-//SLIDER
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    var slider = document.getElementById("slider");
-    var images = slider.getElementsByTagName("img");
-    var currentIndex = 0;
-
-    function changeImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        for (var i = 0; i < images.length; i++) {
-        images[i].style.transform = i === currentIndex ? "translateX(0)" : "translateX(-100%)";
-    }
-    }
-
-    setInterval(changeImage, 3000); // Cambia la imagen cada 3000 milisegundos (3 segundos)
-});
 
 
 //Para hacer que funcionen todas las modales con el código proporcionado, puedes hacer algunos cambios en tu código JavaScript. Aquí tienes una versión ajustada que funcionará con las múltiples modales:

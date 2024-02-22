@@ -39,6 +39,7 @@ h1{
 }
 h2{
     text-align: center;
+    width: 100%;
 }
 
 /**HEADER + FOOTER*/
@@ -95,9 +96,9 @@ article{
             width: 100%;
             padding: 1rem;
             margin-bottom: 10px;
-            background: linear-gradient(45deg, red, blue, green, black);
-            background-size: 400% 400%;
-            animation: cambiar 10s ease infinite;
+            background: linear-gradient(45deg, rgb(0, 153, 255), blue);
+            background-size: 200% 200%;
+            animation: cambiar 5s ease infinite;
         }
     }
 }
@@ -137,12 +138,21 @@ a:hover{
     margin: auto;
     width: 90%;
     text-align: justify;
+    line-height: 1.5;
 }
 
 .modal-container header{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     background-color: #f2A594;
+    grid-template-columns: repeat(2, 1fr);
+    & h2{
+        text-align: start;
+        padding-left: 1.5rem;
+    }
+    & i{
+        text-align: end;
+    }
+
 }
 
 .modal-container header i{
@@ -156,6 +166,10 @@ a:hover{
 }
 .modal-container footer{
     background-color: #B4C0D9;
+    gap: 0.5rem;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 .modal-container footer div:hover{
     cursor: pointer;
@@ -217,6 +231,9 @@ a:hover{
 }
 #foto{
     border: none;
+    & img{
+        width: 90%;
+    }
 }
 
 
@@ -249,13 +266,13 @@ a:hover{
                 grid-column-end: 2;
                 grid-row-start: 2;
                 grid-row-end: 4;
-                /* & img{
-                    padding-top: 10px;
-                } */
+                & img{
+                    width: 70%;
+                }
             }
             & .select{
                 align-self: last baseline;
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
         & section:nth-child(even){
@@ -266,7 +283,7 @@ a:hover{
             align-self: center;
             & h3{
                 width: 100%;
-                height: max-content;
+                /* height: max-content; */
                 background-color: #448ef4;
                 margin: auto;
                 grid-column-start: 1;
@@ -282,13 +299,13 @@ a:hover{
                 grid-column-end: 3;
                 grid-row-start: 2;
                 grid-row-end: 4;
-                /* & img{
-                    padding-top: 10px;
-                } */
+                & img{
+                    width: 70%;
+                }
             }
             & .select{
                 align-self: last baseline;
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
     }
@@ -323,29 +340,15 @@ a:hover{
         display: inline-block;
         & figure{
             float: left;
-            width: 30%;
+            width: 35%;
             margin: 0.5rem 0.5rem 0 0;
             border: none;
         }
     }
-    
 }
 
-@media only screen and (min-width: 1024px) {
-    #slider {
-        display: block;
-        display: flex;
-        overflow: hidden;
-        width: 60%;
-        margin: 0 auto;
-        & img{
-            width: 100%;
-            height: auto;
-            transition: transform 1s ease;
-        }
-    }
-    .modal-container{
-        width: 85%;
-    }
-}
+/* @media only screen and (min-width: 1440px) {
+    
+    
+} */
 
