@@ -336,6 +336,9 @@ a:hover{
     .activa div[class='select']::before{
         content: '▲';
     }
+    .modal-container{
+        width: 85%;
+    }
     .modal-container main{
         display: inline-block;
         & figure{
@@ -347,8 +350,10 @@ a:hover{
     }
 }
 
-/* @media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
+    .modal-container{
+        width: 70%;
+    }
     
-    
-} */
+}
 
