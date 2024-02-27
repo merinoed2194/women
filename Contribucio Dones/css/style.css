@@ -14,6 +14,11 @@
     --font-color2:#3333;
     --footer-white: #E5E1DA;
     --blue-link: #448ef4;
+    --color1: #f2f2f2;
+    --color2: #f2a594;
+    --color3: #b4c0d9;
+    --color4: #7a91bf;
+    --color5: #6b80bf;
 }
 
 html{
@@ -27,7 +32,7 @@ body{
     flex-direction: column;
     height: 100%;
     font-family: 'Noto Sans', sans-serif;
-    background-color: #cef6d8;
+    background-color: var(--color1);
 }
 
 /**TITULOS*/
@@ -45,21 +50,35 @@ h2{
 /**HEADER + FOOTER*/
 
 
-header, footer{
+footer{
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: var(--color3);
 }
 header{
-    background-color: var(--header-section);
-}
-footer{
-    background-color: var(--footer-white);
-    & ul, p{
-        width: 100%;
-        text-align: center;
+    width: 100%;
+    height: auto;
+    & a{
+        /* padding: 0.5rem 1rem; */
+        background-color: var(--color2);
+        color: var(--font-color);
+        border-radius: 10px;
+        text-decoration: none;
     }
+}
+
+/* Introducción */
+body>article{
+    background-image: url(../img/bg-intro.png);
+    background-size: cover;
+}
+
+figure img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /**MAIN*/
@@ -68,8 +87,8 @@ main{
     flex: 1 0 auto;
     flex-direction: column;
     align-items: center;
-    /* background-color: var(--bg-color); */
-    background-color: #f2f2f2;
+    background-color: var(--bg-color);
+    /* background-color: #f2f2f2; */
 }
 
 /**ARTICLE*/
@@ -239,8 +258,60 @@ a:hover{
 
 /*    !MEDIAQUERIES             */
 
+@media only screen and (min-width:320px){
+    header{
+        padding: 1rem;
+        display: grid;
+        gap: 0.5rem;
+        justify-items: center;
+        /* text-align: center; */
+        & a{
+            width: 120px;
+            height: 40px;
+            display: grid;
+            align-self: center;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+    body>article{
+        padding: 1rem;
+        text-align: center;
+        display: grid;
+        gap: 1rem;
+        justify-content: center;
+        & div, figure{
+            display: grid;
+            align-self: center;
+            gap: 1rem;
+        }
+        & div{
+            justify-items: center;
+            & h1{
+                font-size: 1.6rem;
+            }
+            & p{
+                font-size: 0.8rem;
+            }
+        }
+    }
+    footer{
+        padding: 2rem;
+        text-align: center;
+    }
+}
 
 @media only screen and (min-width: 768px){
+    header{
+        padding: 0.5rem;
+        justify-content: space-between;
+        grid-template-columns: repeat(2, 210px);
+        & a{
+            justify-self: end;
+            font-size: 0.8rem;
+            height: 34px;
+        }
+    }
     article{
         & section:nth-child(odd){
             display: grid;
@@ -350,9 +421,63 @@ a:hover{
     }
 }
 
+@media only screen and (min-width: 1024px) {
+    header{
+        grid-template-columns: repeat(2, 250px);
+        padding: 1rem 4rem;
+        & a{
+            font-size: 1rem;
+            width: 130px;
+            height: 40px;
+            &:hover{
+                background-color: var(--color1);
+                color: var(--color2);
+                cursor: pointer;
+                border: 2px solid var(--color2);
+                /* padding-top: -0.6rem; */
+            }
+        }
+    }
+    body>article{
+        padding: 2rem 4rem;
+        grid-template-columns: 1fr 400px;
+        & div{
+            & h1{
+                font-size: 2rem;
+            }
+            & p{
+                font-size: 1rem;
+            }
+        }
+    }
+    #slider {
+        display: block;
+        display: flex;
+        overflow: hidden;
+        width: 60%;
+        margin: 0 auto;
+        & img{
+            width: 100%;
+            height: auto;
+            transition: transform 1s ease;
+        }
+
+    }
+}
+
 @media only screen and (min-width: 1440px) {
     .modal-container{
         width: 70%;
+    }
+    @media only screen and (min-width: 1440px){
+        header{
+            padding: 0.5rem 8rem;
+            grid-template-columns: repeat(2, 300px);
+        }
+        body>article{
+            padding: 3rem 8rem;
+            gap: 6rem;
+        }
     }
     
 }
