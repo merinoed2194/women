@@ -39,7 +39,7 @@ body{
 
 
 h1{
-    text-align: center;
+    /* text-align: center; */
     color: white;
 }
 h2{
@@ -110,12 +110,14 @@ article{
             }
         }
         & h3{
-            color: #fff;
+            /* color: #fff; */
+            position: relative;
+            /* ns para que es este relative */
             cursor: pointer;
             width: 100%;
             padding: 1rem;
             margin-bottom: 10px;
-            background: linear-gradient(45deg, rgb(0, 153, 255), blue);
+            /* background: linear-gradient(45deg, rgb(0, 153, 255), blue); */
             background-size: 200% 200%;
             animation: cambiar 5s ease infinite;
         }
@@ -312,6 +314,17 @@ a:hover{
             height: 34px;
         }
     }
+    body>article{
+        padding: 2rem;
+        /* grid-template-columns: 1fr 35%; */
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        & div{
+            text-align: left;
+            justify-items: start;
+        }
+    }
+    /* quitando este apartado se centra */
     article{
         & section:nth-child(odd){
             display: grid;
@@ -322,8 +335,9 @@ a:hover{
             & h3{
                 width: 100%;
                 height: max-content;
-                background-color: #448ef4;
+                /* background-color: #448ef4; */
                 /* margin: auto; */
+                color: black;
                 grid-column-start: 1;
                 grid-column-end: 3;
                 grid-row-start: 1;
@@ -339,6 +353,8 @@ a:hover{
                 grid-row-end: 4;
                 & img{
                     width: 70%;
+                    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%); 
+                    /** se quita el clip path y quedan normales */
                 }
             }
             & .select{
@@ -355,7 +371,8 @@ a:hover{
             & h3{
                 width: 100%;
                 /* height: max-content; */
-                background-color: #448ef4;
+                /* background-color: #448ef4; */
+                color: black;
                 margin: auto;
                 grid-column-start: 1;
                 grid-column-end: 3;
@@ -372,6 +389,8 @@ a:hover{
                 grid-row-end: 4;
                 & img{
                     width: 70%;
+                    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+                    /** se quita el clip path y quedan normales */
                 }
             }
             & .select{
@@ -450,7 +469,7 @@ a:hover{
             }
         }
     }
-    #slider {
+    /* #slider {
         display: block;
         display: flex;
         overflow: hidden;
@@ -462,7 +481,7 @@ a:hover{
             transition: transform 1s ease;
         }
 
-    }
+    } */
 }
 
 @media only screen and (min-width: 1440px) {
