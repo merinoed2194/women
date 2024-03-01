@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/38de3d9dee.js" crossorigin="anonymous"></script>
     <!-- Mis estilos -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,85 +33,255 @@
     <main>
         <article>
 
-            <h2>TITULAR Edu</h2>
-            <div id="slider">
-                <img src="https://lorem.cat/400x400" />
-                <img src="https://lorem.cat/400x400" />
-                <img src="https://lorem.cat/400x400" />
-            </div>
+            <h2>DONES EN LA HISTÒRIA</h2>
+            
             <!-- primera seccion -->
+
             <section class="container">
-                <h3 class="select">Ada Lovelace</h3>
+                <h3>CREADORA DEL PRIMER ALGORITME INFORMATIC</h3>
                 <figure>
-                    <img src="https://lorem.cat/400x400" />
+                    <img src="material/adalove2.jpg" />
                 </figure>
-                <div class="contenido">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem qui provident possimus adipisci, unde debitis eveniet, id voluptatibus praesentium ratione, ab corporis esse distinctio at veniam reiciendis necessitatibus? Animi.</p>
+                <div class="select">
+                    <p>Ada Lovelace</p>
+                    <p>1815-1852</p>
+                    <a href="#" id="abrir1">+INFO</a>
+                </div>
+                <!-- <div class="contenido">
+                    <p>La seva passió i dedicació van donar resultats: va crear el que avui coneixem com el primer algorisme pensat per ser processat per una màquina. Per això se la considera la primera programadora de computadores. Va dedicar gran part dels seus estudis a descriure amb un llenguatge molt tècnic com funcionaria la màquina analítica, però també va oferir una sèrie d'observacions que deixen clara la seva aportació teòrica. Ada aspirava a crear la informàtica, que ella anomenava la ciència de les operacions.</p>
+                    <a href="#" id="abrir1">+INFO</a>
+                </div> -->
+                <div class="modal oculta-modal" id="modal1">
+                    <div class="modal-container">
+                        <header>
+                            <h2>Ada Lovelace</h2>
+                            <i class="fa-solid fa-square-xmark" id="cerrar1"></i>
+                        </header>
+                        <main>
+                            <figure id="foto">
+                                <img src="material/adalove1.jpg" />
+                            </figure>
+                            <p>Es va suggerir l'ús de targetes perforades com a mètode d'entrada d'informació i instruccions a la màquina analítica. A més, va introduir una notació per escriure programes, principalment basada en el domini que Ada tenia sobre el text de Luigi Menabrea de 1842 (que va comentar personalment completant-lo amb anotacions que són més extenses que el text mateix) sobre el funcionament del teler de Jacquard així com de la màquina analítica de Babbage. Cal destacar a més la seva menció sobre l'existència de zeros o estat neutre a les targetes perforades, ja que les targetes representaven per a la màquina de Babbage números decimals i no binaris (8 perforacions equivaldrien llavors a 8 unitats). També va introduir la possibilitat que la màquina analítica no fos només capaç de realitzar càlculs matemàtics, sinó també, entre moltes altres coses, «produir art» i compondre música, literatura... de fet, afirmava que l'invent seria capaç de realitzar qualsevol cosa que se li demanés, sempre i quan sabéssim com ordenar-ho.</p>
+                        </main>
+                        <footer>
+                            <div class="slider-btn slider-btn-right" id="anterior1">&#60;ANTERIOR</div>
+                            
+                            <div class="slider-btn slider-btn-left" id="siguiente1">SIGUIENTE&#62;</div>
+                        </footer>
+                    </div>
                 </div>
             </section>
             <!-- segunda seccion -->
             <section class="container">
-                <h3 class="select">Jude Milhon</h3>
+                <h3>LA PRIMERA HACKER</h3>
                 <figure>
-                    <img src="https://lorem.cat/400x400" />
+                    <img src="material/Jude-Milhon2.jpg" />
                 </figure>
+                <div class="select">
+                    <p>Jude Milhon</p>
+                    <p>1939-2003</p>
+                </div>
                 <div class="contenido">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem qui provident possimus adipisci, unde debitis eveniet, id voluptatibus praesentium ratione, ab corporis esse distinctio at veniam reiciendis necessitatibus? Animi.</p>
+                    <p>Més coneguda com St. Jude, va ser una de les primeres dones a endinsar-se en aquest món que coneixem com internet. Quan el ciberespai es considerava un lloc per a homes, l'auto-didacta Milhon va aprendre a programar, el 1967, després de llegir la guia Teach Yourself Fortran. De capbussar-se en aquest món, va passar a encoratjar i ajudar a les altres dones a connectar-se a la xarxa.</p>
+                    <a href="#" id="abrir2">+INFO</a>
+                </div>
+                <div class="modal oculta-modal" id="modal2">
+                    <div class="modal-container">
+                        <header>
+                            <h2>Jude Milhon</h2>
+                            <i class="fa-solid fa-square-xmark" id="cerrar2"></i>
+                        </header>
+                        <main>
+                            <figure id="foto">
+                                <img src="material/Jude-Milhon1.jpg" />
+                            </figure>
+                            <p>St. Jude va participar tan activament en pro dels drets civils, que va ser empresonada en diverses ocasions per desobediència civil. Va lluitar per la defensa d'una xarxa pública quan internet estava en mans de molt pocs (militars dels Estats Units i un nombre reduït d'universitats i instituts de recerca), la qual cosa la va portar a crear el primer sistema públic de xarxa conegut com el Projecte de la Comunitat de memòria, el 1973. La seva implicació en defensar el dret de la dona a accedir a la tecnologia també la va portar a escriure, el 1994, Hacking the Wetware: The Nerd Girls Pillow-book (Hackeig el programari biològic: El llibre de capçalera de les 'Nerd'). La creadora del terme cypherpunk (unint xifra i ciberpunk) va ser membre de diverses associacions relacionades amb la defensa de la privadesa digital i la responsabilitat social: Cypherpunks (de la qual va ser membre fundadora) i Computer Professionals for Social Responsibility.</p>
+                        </main>
+                        <footer>
+                            <div class="slider-btn slider-btn-right" id="anterior2">&#60;ANTERIOR</div>
+                            
+                            <div class="slider-btn slider-btn-left" id="siguiente2">SIGUIENTE&#62;</div>
+                        </footer>
+                    </div>
                 </div>
             </section>
             <!-- tercera seccion -->
             <section class="container">
-                <h3 class="select">Rózsa Péter</h3>
+                <h3>La principal contribuïdora al desenvolupament de la Teoria de Funcions Especials Recursives</h3>
                 <figure>
-                    <img src="https://lorem.cat/400x400" />
+                    <img src="material/Rozsa_Peter2.jpeg" />
                 </figure>
+                <div class="select">
+                    <p>Rózsa Péter</p>
+                    <p>1905-1977</p>
+                </div>
                 <div class="contenido">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem qui provident possimus adipisci, unde debitis eveniet, id voluptatibus praesentium ratione, ab corporis esse distinctio at veniam reiciendis necessitatibus? Animi.</p>
+                    <p>El seu primer tema d'investigació va ser la Teoria de Nombres, però es va desanimar en veure que aquests resultats ja havien estat provats per Dickson, la qual cosa va fer que durant un temps s'allunyés de les matemàtiques. No obstant això, a mitjan 1930, el seu company d'estudis, Kalmár, la va animar a examinar el treball de Kurt Gödel, el qual estava incomplet. Va ser a partir d'aquesta experiència quan Rózsa va donar lloc als fonaments de la Teoria de Funcions Recursives.</p>
+                    <a href="#" id="abrir3">+INFO</a>
+                </div>
+                <div class="modal oculta-modal" id="modal3">
+                    <div class="modal-container">
+                        <header>
+                            <h2>Rózsa Péter</h2>
+                            <i class="fa-solid fa-square-xmark" id="cerrar3"></i>
+                        </header>
+                        <main>
+                            <figure id="foto">
+                                <img src="material/Rozsa_Peter1.png" />
+                            </figure>
+                            <p>Mentrestant, Stephen Kleene, d'altra banda, va desenvolupar la teoria general de les funcions recursives (incloent les parcials) basant-se en els textos de Gödel. Péter, el 1951, va recollir aquest coneixement i juntament amb el seu propi treball, va publicar el llibre "Funciones Recursivas", traduït a l'anglès només el 1967, que va ser el primer llibre que va tocar aquest tema; posteriorment, el llibre es convertiria en una referència estàndard. El 1952, Kleene va definir Rósa Péter com la principal contribuïdora de la Teoria de Funcions Especials Recursives.</p>
+                            
+                        </main>
+                        <footer>
+                            <div class="slider-btn slider-btn-right" id="anterior3">&#60;ANTERIOR</div>
+                            
+                            <div class="slider-btn slider-btn-left" id="siguiente3">SIGUIENTE&#62;</div>
+                        </footer>
+                    </div>
                 </div>
             </section>
             <!-- 4 seccion -->
             <section class="container">
-                <h3 class="select">Adele Katz</h3>
+                <h3>La primera programadora de la ENIAC i qui va escriure el manual per realitzar operacions lògiques a la màquina el 1945</h3>
                 <figure>
-                    <img src="https://lorem.cat/400x400" />
+                    <img src="material/ADELE_KATZ1.jpg" />
                 </figure>
+                <div class="select">
+                    <p>Adele Katz</p>
+                    <p>1887-1979</p>
+                </div>
                 <div class="contenido">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem qui provident possimus adipisci, unde debitis eveniet, id voluptatibus praesentium ratione, ab corporis esse distinctio at veniam reiciendis necessitatibus? Animi.</p>
+                    <p>Adele Goldstine (Cognom original Katz), va ser una matemàtica i programadora d'ordinadors estatunidenca. Va estudiar a la Hunter College High School de Nova York, després va realitzar els seus estudis de grau a la Hunter College en l'àrea de les matemàtiques, per després continuar els seus estudis a la Universitat de Michigan, on va fer el màster en Matemàtiques. A Michigan va conèixer a Herman Goldstine, amb qui treballaria durant la construcció de la ENIAC. Es van casar el 1941.</p>
+                    <a href="#" id="abrir4">+INFO</a>
+                </div>
+                <div class="modal oculta-modal" id="modal4">
+                    <div class="modal-container">
+                        <header>
+                            <h2>Adele Katz</h2>
+                            <i class="fa-solid fa-square-xmark" id="cerrar4"></i>
+                        </header>
+                        <main>
+                            <figure id="foto">
+                                <img src="material/ADELE_KATZ2.png" />
+                            </figure>
+                            <p>Es va convertir en la primera programadora de la ENIAC, per després liderar i formar l'equip de programadores pioneres conegudes com Les dones ENIAC, un equip especialitzat en programari gràcies al qual aquell munt de relés i cables va poder complir amb el seu propòsit. Es va convertir en una autèntica programadora especialitzada en llenguatge màquina i va ser la primera a documentar un manual tècnic de computació amb la ENIAC. El 1946, Goldstine va participar en sessions de programació amb Bartik i Dick Clippinger i va ser contractada per ajudar a implementar el programa emmagatzemat de Clippinger a la ENIAC.</p>
+                        </main>
+                        <footer>
+                            
+                            <div class="slider-btn slider-btn-right" id="anterior4">&#60;ANTERIOR</div>
+                            
+                            <div class="slider-btn slider-btn-left" id="siguiente4">SIGUIENTE&#62;</div>
+                        </footer>
+                    </div>
                 </div>
             </section>
             <!-- 5 seccion -->
             <section class="container">
-                <h3 class="select">Grace Murray Hopper</h3>
+                <h3>Creadora del primer compilador d'ordinadors al 1952</h3>
                 <figure>
-                    <img src="https://lorem.cat/400x400" />
+                    <img src="material/grace_hopper1.jpg" />
                 </figure>
+                <div class="select">
+                    <p>Grace Murray Hopper</p>
+                    <p>1906-1992</p>
+                </div>
                 <div class="contenido">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem qui provident possimus adipisci, unde debitis eveniet, id voluptatibus praesentium ratione, ab corporis esse distinctio at veniam reiciendis necessitatibus? Animi.</p>
+                    <p>Va ser una científica de la computació i militar estatunidenca amb el rang de contraalmirall. Va ser pionera en el món de les ciències de la computació i la primera programadora que va utilitzar el Mark I. Entre les dècades dels 50 i 60, va desenvolupar el primer compilador per a un llenguatge de programació i també va propiciar mètodes de validació.</p>
+                    <a href="#" id="abrir5">+INFO</a>
+                </div>
+                <div class="modal oculta-modal" id="modal5">
+                    <div class="modal-container">
+                        <header>
+                            <h2>Grace Murray Hopper</h2>
+                            <i class="fa-solid fa-square-xmark" id="cerrar5"></i>
+                        </header>
+                        <main>
+                            <figure id="foto">
+                                <img src="material/grace_hopper2.jpg" />
+                            </figure>
+                            <p>Grace Hooper va ser una de les dones més influents en l'àmbit de la informàtica, a més de dedicar la seva vida al servei del seu país. Va centrar els seus estudis en millorar la tecnologia nord-americana i, per consegüent, mundial. El desenvolupament de la primera calculadora electromecànica (Mark I, juntament amb Howard H. Aiken) i la creació del llenguatge COBOL, que permetia que persones no especialitzades poguessin programar, van establir una base d'ajuda i simplificació per a l'evolució del món de la informàtica. Des de l'any 1971, l'Association for Computing Machinery atorga un premi anual amb el seu nom, el Premi Grace Murray Hopper, que reconeix persones que han fet aportacions excepcionals a la informàtica abans dels 35 anys. Pel llegat que Hooper ha deixat, molts estudiosos la consideren la primera "hacker" de l'era de la informàtica. És coneguda amb els sobrenoms d'Avia COBOL i Amazing Grace.</p>
+                        </main>
+                        <footer>
+                            <div class="slider-btn slider-btn-right" id="anterior5">&#60;ANTERIOR</div>
+                            
+                            <div class="slider-btn slider-btn-left" id="siguiente5">SIGUIENTE&#62;</div>
+                        </footer>
+                    </div>
                 </div>
             </section>
             <!-- 6 seccion -->
             <section class="container">
-                <h3 class="select">Frances Elizabeth Allen</h3>
+                <h3>Va establir les bases de la tecnologia del GPS, Bluetooth i Wi-Fi que utilitzem avui en dia.</h3>
                 <figure>
-                    <img src="https://lorem.cat/400x400" />
+                    <img src="material/lamar1.jpg" />
                 </figure>
+                <div class="select">
+                    <p>Hedy Lamarr</p>
+                    <p>1914-2000</p>
+                </div>
                 <div class="contenido">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem qui provident possimus adipisci, unde debitis eveniet, id voluptatibus praesentium ratione, ab corporis esse distinctio at veniam reiciendis necessitatibus? Animi.</p>
+                    <p>Hedwig Eva Maria Kiesler, coneguda com Hedy Lamarr (Viena, 9 de novembre de 1914 - Casselberry, Florida, 19 de gener de 2000), va ser una actriu de cinema i inventora austroamericana. Va inventar la primera versió de l'espectre ampliat que permetria les comunicacions sense fils de llargues distàncies.</p>
+                    <a href="#" id="abrir6">+INFO</a>
+                </div>
+                <div class="modal oculta-modal" id="modal6">
+                    <div class="modal-container">
+                        <header>
+                            <h2>Hedy Lamarr</h2>
+                            <i class="fa-solid fa-square-xmark" id="cerrar6"></i>
+                        </header>
+                        <main>
+                            <figure id="foto">
+                                <img src="material/lamar2.png" />
+                            </figure>
+                            <p>Al començament de la Segona Guerra Mundial, va inventar, desenvolupar i patentar un sistema de guia per ràdio per a torpedes aliats que utilitzava l'espectre ampliat i la tecnologia de salt de freqüència per superar la amenaça d'interferències per part de les Potències de l'Eix. Tot i que la Marina dels Estats Units no va adoptar la tecnologia fins a la dècada de 1960, els principis del seu treball es van unir a la tecnologia Bluetooth i són similars als mètodes utilitzats en les versions heretades de Wi-Fi. Aquest treball va conduir a la seva incorporació al National Inventors Hall of Fame el 2014. Des de fa uns anys, la invenció del salt de freqüència s'ha associat a Hedy Lamarr, però la història és més complexa.</p>
+                        </main>
+                        <footer>
+                            <div class="slider-btn slider-btn-right" id="anterior6">&#60;ANTERIOR</div>
+                            
+                            <div class="slider-btn slider-btn-left" id="siguiente6">SIGUIENTE&#62;</div>
+                        </footer>
+                    </div>
                 </div>
             </section>
-            <!-- 7 seccion -->
+            <!-- 5 seccion -->
             <section class="container">
-                <h3 class="select">Hedy Lamarr</h3>
+                <h3>Desenvolupà i implementà els seus mètodes com a part de compiladors per a IBM STRETCH-HARVEST i el sistema experimental avançat de computació.</h3>
                 <figure>
-                    <img src="https://lorem.cat/400x400">
+                    <img src="material/Allen1.jpg" />
                 </figure>
+                <div class="select">
+                    <p>Frances Elizabeth Allen</p>
+                    <p>1932-2020</p>
+                </div>
                 <div class="contenido">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem qui provident possimus adipisci, unde debitis eveniet, id voluptatibus praesentium ratione, ab corporis esse distinctio at veniam reiciendis necessitatibus? Animi.</p>
+                    <p>Va ser una informàtica estatunidenca i pionera en el camp de l'optimització de compiladors. Els seus èxits inclouen el treball en compiladors, optimització de codi i computació paral·lela. També va tenir un paper important en la creació de llenguatges de programació i codis de seguretat per a l'Agència de Seguretat Nacional dels Estats Units.</p>
+                    <a href="#" id="abrir7">+INFO</a>
+                </div>
+                <div class="modal oculta-modal" id="modal7">
+                    <div class="modal-container">
+                        <header>
+                            <h2>Frances Elizabeth Allen</h2>
+                            <i class="fa-solid fa-square-xmark" id="cerrar7"></i>
+                        </header>
+                        <main>
+                            <figure id="foto">
+                                <img src="material/Allen3.jpg" />
+                            </figure>
+                            <p>A Allen li van assignar el projecte Harvest per desxifrar codis amb l'Agència de Seguretat Nacional el 1959 i va treballar en un llenguatge de programació anomenat Alpha.9. Va dirigir l'equip d'optimització del compilador tant per Harvest com pel projecte Stretch. Durant la dècada de 1960, va contribuir al projecte ACS-1 i, a la dècada de 1970, a PL/I. Del 1970 al 1971, va passar un any sabàtic a la Universitat de Nova York i va exercir com a professora adjunta durant uns anys després. Un altre any sabàtic la va dur a la Universitat de Stanford el 1977. Es va convertir en la primera sòcia d'IBM el 1989. El 2007, IBM va crear el Premi Doctor de la Camaraderia en el seu honor i el 2006 va rebre el Premi Turing.</p>
+                            
+                        </main>
+                        <footer>
+                            <div class="slider-btn slider-btn-right" id="anterior7">&#60;ANTERIOR</div>
+                            
+                            <div class="slider-btn slider-btn-left" id="siguiente7">SIGUIENTE&#62;</div>
+                        </footer>
+                    </div>
                 </div>
             </section>
         </article>
         <form>
-
+            
+            
         </form>
     </main>
     <footer>
